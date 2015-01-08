@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+
+//= require todo
+//= require_tree ./controllers
+//= require_tree ./directives
+//= require_tree ./services

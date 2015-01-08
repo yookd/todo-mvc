@@ -1,0 +1,16 @@
+div#todo-list-container {
+  margin-bottom: 25px;
+  border: 1px solid #eee;
+  padding: 25px 0px;
+  text-align: center;
+
+  ul {
+    padding-left: 0px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+  }
+}

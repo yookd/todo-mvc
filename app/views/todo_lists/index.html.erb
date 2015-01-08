@@ -1,0 +1,33 @@
+<div class="row">
+  <h1>Todo App</h1>
+</div>
+
+<div class="row" ng-controller="TodoListCtrl">
+  <button type="button" ng-click="createTodoList();" class="btn btn-default">+ Create Todo List</button>
+
+  <div class="row" ng-show="todoLists.length">
+    <div class="col-md-6 col-md-offset-3">
+
+      <div id="todo-list-container" ng-repeat="list in todoLists">
+        <div id="todo-list-title">
+          <input ng-model="list.title" type="text" autofocus placeholder="List Title" class="list-header" />
+        </div>
+
+        <ul id="todo-list-items" ng-controller="TodoItemCtrl">
+          <li class="todo-list-item" ng-repeat="task in list.items">
+            <div>
+              <input ng-model="task.description" type="text" name="description" id="description" placeholder="Task item" />
+            </div>
+          </li>
+
+          <li>
+            <button ng-click="createTodoListItem()" class="btn btn-info">+ Add Todo List Item</button>
+          </li>
+        </ul>
+
+        <button type="button" class="btn btn-success" ng-click="saveTodoList($index)">Save Todo List</button>
+      </div>
+
+    </div>
+  </div>
+</div>
